@@ -1,0 +1,5 @@
+include run.py
+include freeze-setup.py
+include app/ui/*.ui
+include app/external/*.jar
+include app/resources/*.pdf

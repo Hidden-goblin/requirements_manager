@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>16</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>1184</y>
+      <w>848</w>
+      <h>560</h>
+    </coordinates>
+    <panel_attributes>Repository
+--
+ - db_schema: dictionary
+ - db_linkto: dictionary
+ - repository: dictionary
+--
+ + save_repository(): boolean
+ + close_repository(): boolean
+ + get_elements(table:Sting, filtering:Object): dictionary
+ + add_element(element:dictionary, table:String): dictionary
+ + update_element(id:int,element:dictionary, key:String, value:String, table:String): dictionary
+ - __update_element(id:int, element:dictionary, table:String): dictionary
+ + get_element(id:int, table:String, keys: list): dictionary
+ - __get_element(element_id:int, table:String): dictionary
+ + get_attachments_folder(): dictionary
+ + remove_element(id:int, table:String): dictionary
+ + get_repository_name(): String
+ + get_working_repository_name(): String
+ + __init__(file_name: String): Repository</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1808</x>
+      <y>1360</y>
+      <w>720</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Validator
+--
+--
+__+ validate( element:dictionary, schema: dictionary): dictionary__</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1472</x>
+      <y>1392</y>
+      <w>368</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>16</x>
+      <y>560</y>
+      <w>400</w>
+      <h>384</h>
+    </coordinates>
+    <panel_attributes>*db_schema*
+
+JSON with:
+{
+  "table1": {
+      "field1":{properties},
+      "field2":{properties}...
+      }
+   "table2": {
+      "field1":{properties},
+      "field2":{properties}
+      }
+    ...
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>720</y>
+      <w>272</w>
+      <h>560</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1= import schema</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;330.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>16</x>
+      <y>1040</y>
+      <w>448</w>
+      <h>784</h>
+    </coordinates>
+    <panel_attributes>style=wordwrap
+*db_linkto*
+
+only the contain link is given i.e. "field" is a list of id and field1 is the container id.
+
+JSON with
+{
+  "one-one":{
+  "from_table1": {
+     "field1": ["to_table","field"],
+     "field2": ["to_table","field"]...
+     },
+  "from_table2": {
+     "field1": ["to_table","field"],
+     "field2": ["to_table","field"]...
+     }
+   ...
+   },
+   "one-many":"from_table1": {
+     "field1": ["to_table","field"],
+     "field2": ["to_table","field"]...
+     },
+  "from_table2": {
+     "field1": ["to_table","field"],
+     "field2": ["to_table","field"]...
+     }
+   ...
+   }
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>1232</y>
+      <w>224</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1= import schema</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>480</y>
+      <w>848</w>
+      <h>384</h>
+    </coordinates>
+    <panel_attributes>/iRepository/
+--
+--
+ + save_repository(): boolean
+ + close_repository(): boolean
+ + get_elements(table:Sting, filtering:Object): dictionary
+ + add_element(element:dictionary, table:String): dictionary
+ + update_element(id:int,element:dictionary, key:String, value:String, table:String): dictionary
+ + get_element(id:int, table:String, keys: list): dictionary
+ + get_attachments_folder(): dictionary
+ + remove_element(id:int, table:String): dictionary
+ + get_repository_name(): String
+ + get_working_repository_name(): String
+ + __init__(file_name: String): Repository</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1024</x>
+      <y>848</y>
+      <w>48</w>
+      <h>368</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1808</x>
+      <y>1520</y>
+      <w>400</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>ExportAndFormat
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1472</x>
+      <y>1584</y>
+      <w>368</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>0</x>
+      <y>1872</y>
+      <w>480</w>
+      <h>384</h>
+    </coordinates>
+    <panel_attributes>*repository structure*
+
+{
+   "name" : String,
+   "folder": String,
+   "working": String,
+   "attachments": String,
+	"object": &lt;object&gt;,
+	"tables" : {
+	    "table 1": &lt;object&gt;,
+	    "table 2": &lt;object&gt;,
+	    ...
+	    }
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>464</x>
+      <y>1280</y>
+      <w>208</w>
+      <h>752</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1= repository</panel_attributes>
+    <additional_attributes>10.0;450.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2944</x>
+      <y>64</y>
+      <w>160</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>MainApplication</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

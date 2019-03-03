@@ -1,0 +1,29 @@
+This is a doctest based regression suite for TinyDBRepository.py
+
+Giving a valid repository file prompts 'Repository successfully created' message
+>>> from app.data.TinyDBRepository import TinyDbRepository
+>>> repo = TinyDbRepository(file_name = "test.us")
+Repository successfully created
+
+Adding an theme element returns an dictionary with 'code', 'message' and 'id' keys.
+>>> resp = repo.add_element( {"name":"essai1", "description":"essai"}, "themes")
+
+>>> set(["code","message","id"]).issubset(resp.keys())
+True
+
+>>> resp["code"] == 0
+True
+
+>>> resp['message'] == 'Successful insertion.'
+True
+
+Getting all elements returns a dictionary with 'code' and 'elements' when successful
+>>> resp = repo.get_elements("themes")
+>>> set(["code","elements"]).issubset(resp.keys())
+True
+
+Getting a specific element returns a dictionary with 'code', 'message', 'element' and 'id'
+>>> resp = repo.get_element(element_id = 1, table="themes")
+>>> set(["code","message","element"]).issubset(resp.keys())
+True
+
