@@ -1,0 +1,43 @@
+{
+  "one-one": {
+    "scenarios": {
+      "linked to feature": [
+        "features",
+        "scenarios"
+      ]
+    },
+    "features": {
+      "linked to epic": [
+        "epics",
+        "features"
+      ]
+    },
+    "epics": {
+      "linked to theme": [
+        "themes",
+        "epics"
+      ]
+    },
+    "themes": {
+    },
+    "attachments": {
+      "attached to": [
+        "features",
+        "attachments"
+      ]
+    }
+  },
+    "one-many":
+    {
+      "themes": {
+        "epics": "epics"
+      },
+      "epics": {
+        "features": "features"
+      },
+      "features": {
+        "attachments": "attachments",
+        "scenarios": "scenarios"
+      }
+    }
+}

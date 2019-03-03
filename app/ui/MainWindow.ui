@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1680</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="addFeatureBtn">
+    <property name="geometry">
+     <rect>
+      <x>1280</x>
+      <y>80</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add Feature</string>
+    </property>
+   </widget>
+   <widget class="QTreeWidget" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>1221</width>
+      <height>821</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="addThemeBtn">
+    <property name="geometry">
+     <rect>
+      <x>1280</x>
+      <y>20</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add Theme</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addEpicBtn">
+    <property name="geometry">
+     <rect>
+      <x>1280</x>
+      <y>50</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add Epic</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1680</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menuTest">
+    <property name="title">
+     <string>Repository</string>
+    </property>
+    <addaction name="actionNew_Repository"/>
+    <addaction name="actionOpen_Repository"/>
+    <addaction name="actionSave_Repository"/>
+    <addaction name="actionClose_Repository"/>
+    <addaction name="separator"/>
+    <addaction name="actionConnect_to_Jira"/>
+    <addaction name="actionRepository_settings"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuExport">
+    <property name="title">
+     <string>Export</string>
+    </property>
+    <addaction name="actionExport_feature"/>
+   </widget>
+   <widget class="QMenu" name="menuImport">
+    <property name="title">
+     <string>Import</string>
+    </property>
+    <addaction name="actionImport_Excel"/>
+    <addaction name="actionImport_from_TestInsight"/>
+   </widget>
+   <addaction name="menuTest"/>
+   <addaction name="menuExport"/>
+   <addaction name="menuImport"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionOpen_Repository">
+   <property name="text">
+    <string>Open Repository</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave_Repository">
+   <property name="text">
+    <string>Save Repository</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionNew_Repository">
+   <property name="text">
+    <string>New Repository</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionExport_feature">
+   <property name="text">
+    <string>Export feature to gherkins</string>
+   </property>
+  </action>
+  <action name="actionImport_from_TestInsight">
+   <property name="text">
+    <string>Import from TestInsight</string>
+   </property>
+  </action>
+  <action name="actionClose_Repository">
+   <property name="text">
+    <string>Close Repository</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="actionImport_Excel">
+   <property name="text">
+    <string>Import Excel</string>
+   </property>
+  </action>
+  <action name="actionRepository_settings">
+   <property name="text">
+    <string>Repository settings</string>
+   </property>
+  </action>
+  <action name="actionConnect_to_Jira">
+   <property name="text">
+    <string>Connect to Jira</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

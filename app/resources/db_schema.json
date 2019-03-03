@@ -1,0 +1,49 @@
+{
+  "scenarios": {
+    "name": { "mandatory":true},
+    "given": { "mandatory":true},
+    "when": { "mandatory":true},
+    "then": { "mandatory":true},
+    "examples": { "mandatory":true},
+    "linked to feature": { "mandatory":true},
+    "status": { "mandatory":false},
+    "current foreign id": { "mandatory":false},
+    "past foreign ids": { "mandatory":false}
+  },
+  "features": {
+    "name": { "mandatory":true},
+    "role": { "mandatory":true},
+    "action": { "mandatory":true},
+    "benefit": { "mandatory":true},
+    "summary": { "mandatory":true},
+    "business value": { "mandatory":true},
+    "status": { "mandatory":false},
+    "current foreign id": { "mandatory": false},
+    "past foreign ids": { "mandatory": false},
+    "scenarios": { "mandatory": false},
+    "attachments": { "mandatory": false},
+    "linked to epic": { "mandatory": false}
+  },
+  "epics": {
+    "name": { "mandatory":true},
+    "description": { "mandatory":true},
+    "linked to theme": { "mandatory":false},
+    "features": { "mandatory":false}
+  },
+  "themes": {
+    "name": { "mandatory":true},
+    "description": { "mandatory":true},
+    "epics": { "mandatory":false}
+  },
+  "attachments":{
+    "type": { "mandatory":true},
+    "name": { "mandatory":true},
+    "attached to": { "mandatory":true},
+    "data": { "mandatory":false}
+  },
+  "settings":{
+    "project_id": { "mandatory":false},
+    "end_point": { "mandatory":false},
+    "mapping": { "mandatory":false}
+  }
+}
